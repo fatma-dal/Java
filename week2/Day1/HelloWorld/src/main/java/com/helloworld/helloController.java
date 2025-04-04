@@ -1,18 +1,18 @@
 package com.helloworld;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-@RestController
-@RequestMapping("/daikichi")
+@Controller
+//@RequestMapping()
 
 public class helloController {
 	
-	@GetMapping("")
+	@RequestMapping("/")
 	public String hello() {
-		return "Welcome!";
+		return "demo.jsp";
 	}
 	@GetMapping("/today")
 	public String helloToday() {
