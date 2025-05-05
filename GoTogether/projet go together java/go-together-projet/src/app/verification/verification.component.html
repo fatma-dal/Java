@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTogether - Driver Verification</title>
+  
+    
+    <style>
+        body {
+            overflow-x: hidden; 
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 2rem;
+        }
+        .license-preview {
+            height: 300px; /* Hauteur fixe pour l'aperçu */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f3f5; /* Gris très clair */
+        }
+        .license-preview img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        /* Alignement labels/texte */
+        .col-form-label {
+            font-weight: 500; /* Labels un peu plus gras */
+            color: #6c757d; /* Gris Bootstrap 'muted' */
+        }
+        .form-control-plaintext {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .card-footer {
+            background-color: #fff; /* Fond blanc pour le footer */
+        }
+
+        /* Style des onglets */
+        .nav-tabs .nav-link {
+            color: #495057;
+        }
+        .nav-tabs .nav-link.active {
+            color: #0d6efd;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+    
+        <!-- Main Content Area -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+            <!-- Header -->
+            <h2 class="fw-bold">Driver Verification</h2>
+            <p class="text-muted mb-4">Review and verify driver accounts.</p>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <!-- Onglet actif -->
+                    <a class="nav-link active" aria-current="page" href="#">Pending</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Approved</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Rejected</a>
+                </li> -->
+            </ul>
+
+            <!-- Driver Details Card -->
+            <div class="card">
+                <div class="card-body">
+                    <!-- Driver Header Info -->
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div>
+                            <h4 class="card-title mb-1">John Doe</h4>
+                            <p class="card-subtitle text-muted mb-0">Applied on April 18, 2025</p>
+                        </div>
+                        <!-- Badge de statut -->
+                        <span class="badge rounded-pill bg-dark fs-6">Pending</span>
+                    </div>
+
+                    <div class="row">
+                        <!-- Colonne Gauche: Driver Information -->
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <h6 class="mb-3 fw-semibold">Driver Information</h6>
+                            <div class="mb-2 row">
+                                <label class="col-sm-4 col-form-label">Email:</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-plaintext">john.doeexample.com</p>
+                                </div>
+                            </div>
+                            <div class="mb-2 row">
+                                <label class="col-sm-4 col-form-label">Phone:</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-plaintext">+33 6 12 34 56 78</p>
+                                </div>
+                            </div>
+                            <div class="mb-2 row">
+                                <label class="col-sm-4 col-form-label">License Number:</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-plaintext">DL12345678</p>
+                                </div>
+                            </div>
+                            <div class="mb-2 row">
+                                <label class="col-sm-4 col-form-label">Vehicle:</label>
+                                <div class="col-sm-8">
+                                    <p class="form-control-plaintext">Renault Clio (2020)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colonne Droite: License Document -->
+                        <div class="col-lg-6">
+                            <h6 class="mb-3 fw-semibold">License Document</h6>
+                            <div class="license-preview border rounded text-center p-3">
+                                <!-- Mettez une balise <img> ici si vous avez une image -->
+                                <!-- <img src="path/to/license.jpg" alt="License Preview"> -->
+                                <p class="text-muted m-0">License Image Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Footer: Actions -->
+                <div class="card-footer text-end border-top pt-3 pb-3">
+                    <button type="button" class="btn btn-outline-danger me-2">
+                        <i class="bi bi-x-lg"></i> Reject
+                    </button>
+                    <button type="button" class="btn btn-success">
+                        <i class="bi bi-check-lg"></i> Approve
+                    </button>
+                </div>
+            </div> <!-- Fin card -->
+
+            
+        </main>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<
+</body>
+</html>

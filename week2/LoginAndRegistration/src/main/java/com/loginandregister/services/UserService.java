@@ -23,6 +23,7 @@ public class UserService {
 	
 	public User getUserById(Long id) {
 		Optional<User> user=userRepo.findById(id);
+		System.out.println(id);
 		if(user.isEmpty()) {
 			return null;
 		}
@@ -66,4 +67,13 @@ public class UserService {
 		}
 		return user;
 	}
+	// find a user by ID from DB
+		//public User findUserById(Long id) {
+			//Optional<User> maybeUser = userRepo.findById(id);
+			//if (maybeUser.isPresent()) {
+				//return maybeUser.get();
+			//} else {
+				//return null;
+			//}
+		//}
 }

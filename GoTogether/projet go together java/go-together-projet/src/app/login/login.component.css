@@ -1,0 +1,21 @@
+.animated-car {
+    position: relative;
+    display: inline-block;
+    animation: moveCar 3s ease-in-out infinite;
+    font-size: 40px;
+    color: #FE7743;
+  }
+  
+  @keyframes moveCar {
+    0% {
+      left: 0;
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(120px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  

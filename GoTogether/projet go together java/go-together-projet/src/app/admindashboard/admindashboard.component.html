@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTogether - Driver Verification</title>
+    <!-- Bootstrap CSS -->
+
+
+    <style>
+        /* Styles spécifiques pour la sidebar et le contenu principal */
+        body {
+            overflow-x: hidden; /* Prévenir le défilement horizontal */
+        }
+
+        .sidebar {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+
+        .main-content {
+            margin-left: 0;
+            padding: 0;
+            height: auto;
+            overflow: visible;
+        }
+
+        .navbar {
+            position: static;
+            left: 0;
+            right: 0;
+            height: auto;
+            box-shadow: none;
+        }
+
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .sidebar .nav-link .bi { /* Style pour les icônes Bootstrap */
+             width: 1.2em;
+             display: inline-block;
+             text-align: center;
+             margin-right: 0.5rem;
+        }
+
+        .sidebar .nav-link.active {
+            color: #fff;
+            background-color: #198754; /* Vert Bootstrap 'success' */
+        }
+
+        .sidebar .nav-link:hover:not(.active) {
+            background-color: #e9ecef;
+            color: #000;
+        }
+
+        .sidebar .admin-badge {
+            font-size: 0.8em;
+            vertical-align: middle;
+        }
+
+        .sidebar .logout-link {
+           margin-top: auto; /* Pousse le lien de logout en bas */
+        }
+
+        /* Contenu principal */
+        .main-content {
+            margin-left: 250px; /* Largeur approximative de la sidebar lg */
+            padding: 2rem;
+        }
+
+        @media (max-width: 767.98px) {
+            .sidebar {
+                position: static;
+                height: auto;
+                width: 100%;
+                box-shadow: none;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+             .sidebar .position-sticky {
+                height: auto; /* Reset height for mobile */
+             }
+            .sidebar .logout-link {
+                margin-top: 1rem; /* Add some space on mobile */
+            }
+        }
+
+        /* Aperçu de la licence */
+        .license-preview {
+            height: 300px; /* Hauteur fixe pour l'aperçu */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f3f5; /* Gris très clair */
+        }
+
+        .license-preview img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        /* Alignement labels/texte */
+        .col-form-label {
+            font-weight: 500; /* Labels un peu plus gras */
+            color: #6c757d; /* Gris Bootstrap 'muted' */
+        }
+        .form-control-plaintext {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .card-footer {
+            background-color: #fff; /* Fond blanc pour le footer */
+        }
+
+        /* Style des onglets */
+        .nav-tabs .nav-link {
+            color: #495057;
+        }
+        .nav-tabs .nav-link.active {
+            color: #0d6efd;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <div class="position-sticky pt-3">
+                <!-- Logo/Title -->
+                <div class="d-flex align-items-center ps-3 mb-4">
+                    <h4 class="me-2 mb-0 fw-bold">GoTogether</h4>
+                    <span class="badge bg-success admin-badge">Admin</span>
+                </div>
+
+                <!-- Navigation -->
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link"  routerLink="dashboard">
+                           <i class="bi bi-grid-fill"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Lien actif -->
+                        <a class="nav-link active" aria-current="page" routerLink="driver-verification">
+                           <i class="bi bi-person-check-fill"></i> Driver Verification
+                        </a>
+                    </li>
+                    
+<!--                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-geo-alt-fill"></i> Trip Approvals
+                        </a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">
+                           <i class="bi bi-file-earmark-text-fill"></i> User Reports
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link"aria-current="page"  routerLink="usermanagement">
+                           <i class="bi bi-people-fill"></i> User Management
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                           <i class="bi bi-gear-fill"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Logout (poussé en bas) -->
+                <div class="logout-link px-3 mt-auto pb-3">
+                  <hr>
+                  <ul class="nav flex-column">
+                     <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">
+                           <i class="bi bi-box-arrow-left"></i> Logout
+                        </a>
+                     </li>
+                  </ul>
+                </div>
+
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
+    
+    </div>
+   
+</div>
+
+</body>
+</html>

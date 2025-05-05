@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          background-color: #273F4F;
+          color: #f8f9fa;
+          min-height: 100vh;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+      
+        h2, h3, h4, h5, h6 {
+          color: #273F4F;
+          font-weight: bold;
+        }
+      
+        .container {
+          margin-top: 100px;
+        }
+      
+        .card {
+          background-color: white;
+          border: 1px solid #FE7743;
+          border-radius: 12px;
+          box-shadow: 0 8px 16px rgba(254, 119, 67, 0.15);
+          transition: transform 0.3s ease;
+        }
+      
+        .card:hover {
+          transform: translateY(-5px);
+        }
+      
+        .card-body {
+          padding: 20px;
+        }
+      
+        .btn-success, .btn-orange {
+          background-color: #FE7743;
+          border: none;
+          border-radius: 8px;
+          color: white;
+          font-weight: 600;
+          padding: 10px 20px;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+      
+        .btn-success:hover, .btn-orange:hover {
+          background-color: #e65c29;
+          transform: translateY(-2px);
+          color: white;
+        }
+      
+        .btn-outline-secondary {
+          border: 2px solid #FE7743;
+          color: #FE7743;
+          font-weight: 600;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        }
+      
+        .btn-outline-secondary:hover {
+          background-color: #FE7743;
+          color: white;
+          transform: translateY(-2px);
+        }
+      
+        .text-muted {
+          color: #6c757d !important;
+        }
+      
+        hr {
+          border-top: 2px solid #FE7743;
+          opacity: 0.7;
+        }
+      
+        .nav-link.active {
+          color: #FE7743 !important;
+          border-bottom: 2px solid #FE7743;
+        }
+      
+        .nav-link {
+          color: #6c757d;
+          font-weight: 600;
+        }
+      
+        .nav-link:hover {
+          color: #FE7743;
+        }
+      
+        .fw-bold {
+          font-weight: 700 !important;
+        }
+      
+        .fw-semibold {
+          font-weight: 600 !important;
+        }
+        body {
+        background-color: #273F4F;
+        color: #f8f9fa;
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0; /* Ajouté */
+        padding: 0; /* Ajouté */
+    }
+      </style>
+      
+    
+      
+</head>
+<body>
+    <!-- src/app/ride-details/ride-details.component.html -->
+<div class="container mb-4 "style="margin-left: 450px;margin-top:180px" >
+    <div class="row" >
+  
+      <!-- Left Panel: Trip Details -->
+      <div class="col-lg-8 mb-4 mb-lg-0" >
+        <div class="card shadow-sm">
+          <div class="card-body">
+  
+            <!-- Header: Origin, Destination, Price -->
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <h2 class="fw-bold mb-1">Tunis <i class="bi bi-arrow-right"></i> Sousse</h2>
+                <p class="text-muted mb-0">
+                  <i class="bi bi-calendar me-1"></i> 25 avril 2024 - 08:00
+                </p>
+              </div>
+              <div class="text-end">
+                <h3 class="fw-bold  mb-0" style="text-color: #273F4F;">15 DT</h3>
+                <!-- <small class="text-muted">3 places disponibles</small> -->
+              </div>
+            </div>
+            <hr>
+            <!-- Driver Info -->
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-person-circle fs-2 me-3 text-secondary"></i>
+              <div>
+                <h5 class="mb-0">Ahmed</h5>
+                <!-- <span class="text-warning me-2"><i class="bi bi-star-fill"></i> 4.8</span> -->
+                <!-- <small class="text-muted">- 35 trajets</small> -->
+              </div>
+            </div>
+  
+            <hr>
+  
+            
+            <ul class="nav nav-underline mb-3">
+               <li class="nav-item">
+                 <a class="nav-link active fw-semibold" aria-current="page" href="#">Détails</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link text-muted" href="#">Itinéraire</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link text-muted" href="#">Véhicule</a>
+               </li>
+             </ul>
+  
+  
+            <!-- Details Section -->
+            <div>
+              <h5 class="fw-semibold mb-2">Description</h5>
+              <p class="text-muted">Trajet direct sans arrêt. Départ du centre-ville de Tunis. Arrivée au centre-ville de Sousse.</p>
+  
+              <div class="row mt-4 mb-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <h6 class="fw-semibold">Durée estimée</h6>
+                  <p class="mb-0"><i class="bi bi-clock me-1"></i> 1h 45min</p>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="fw-semibold">Distance</h6>
+                  <p class="mb-0"><i class="bi bi-signpost-split me-1"></i> 140 km</p> <!-- Using a different icon as car wasn't clear in original -->
+                </div>
+              </div>
+  
+              <!-- <h5 class="fw-semibold mb-2">Préférences</h5> -->
+              <!-- <div>
+                <span class="badge border bg-light text-dark me-2 p-2">Non-fumeur</span>
+                <span class="badge border bg-light text-dark me-2 p-2">Climatisation</span>
+                <span class="badge border bg-light text-dark p-2">2 bagages max</span>
+              </div> -->
+            </div>
+  
+          </div> <!-- End card-body -->
+        </div> <!-- End card -->
+      </div> <!-- End col-lg-8 -->
+  
+      <!-- Right Panel: Booking & Contact -->
+      <div class="col-lg-4">
+  
+        <!-- Booking Card -->
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3">Réserver ce trajet</h4>
+  
+            <div class="d-flex justify-content-between mb-2">
+              <span>Prix par place</span>
+              <span>15 DT</span>
+            </div>
+            <div class="d-flex justify-content-between text-muted mb-2">
+              <span>Frais de service</span>
+              <span>2 DT</span>
+            </div>
+  
+            <hr>
+  
+            <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+              <span>Total</span>
+              <span>17 DT</span>
+            </div>
+  
+            <button class="btn btn-success w-100 btn-lg">Réserver maintenant</button>
+  
+            <p class="text-muted text-center small mt-3 mb-0">
+              Paiement sécurisé - Annulation gratuite jusqu'à 24h avant le départ
+            </p>
+          </div>
+        </div> 
+  
+        <!-- Contact Card -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="fw-bold mb-3">Contacter Ahmed</h5>
+            <button class="btn btn-outline-secondary w-100 mb-2">
+              <i class="bi bi-envelope me-2"></i> Envoyer un message
+            </button>
+            <button class="btn btn-outline-secondary w-100">
+              <i class="bi bi-telephone me-2"></i> Appeler
+            </button>
+          </div>
+        </div> 
+  
+      </div> 
+  
+    </div> 
+
+
+  </div> <!-- End container -->
+
+ <!--  FOOTER -->
+
+
+
+  
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+Animation moderne pour la navbar
+.animated-navbar {
+    animation: slideDownFade 0.8s ease-out;
+  }
+  
+  @keyframes slideDownFade {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Petite animation de rebond sur l’icône */
+  .animate-bounce {
+    animation: bounce 1.2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  @keyframes drive {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-drive {
+    animation: drive 1s infinite ease-in-out;
+  }
+  
+
+  .profile-pic-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-pic-container img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .profile-pic-container:hover img {
+    opacity: 0.8; /* Effet d'assombrissement */
+    transform: scale(1.05); /* Zoom légèrement */
+  }
+  
+  .edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .profile-pic-container:hover .edit-icon {
+    background-color: rgba(0, 0, 0, 0.8); /* Icône devient plus foncée au survol */
+  }
+  

@@ -1,0 +1,8 @@
+:host {
+    display: block;
+    background-color: initial;
+    padding-bottom: 0;
+    min-height: auto;
+    margin-left: 0;
+    overflow-y: visible;
+}

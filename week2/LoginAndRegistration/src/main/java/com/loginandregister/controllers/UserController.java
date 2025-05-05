@@ -37,7 +37,7 @@ public class UserController {
 			return "index";
 		}
 		session.setAttribute("user_id", user.getId());
-		return "redirect:/welcome";
+		return "redirect:/classes";
 	}
 	
 	@PostMapping("/login")
@@ -48,17 +48,10 @@ public class UserController {
 			return "index";
 		}
 		session.setAttribute("user_id", user.getId());
-		return "redirect:/welcome";
+		return "redirect:/classes";
 	}
 	
-	@GetMapping("/welcome")
-	public String welcome(HttpSession session,Model model) {
-		if(session.getAttribute("user_id")!=null) {
-			model.addAttribute("user",userService.getUserById((Long)session.getAttribute("user_id")));
-			return "welcome";
-		}
-		return "redirect:/";
-	}
+	
 	
 	@GetMapping("/logout")
 	public String  logout(HttpSession session) {

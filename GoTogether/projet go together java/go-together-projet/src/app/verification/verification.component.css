@@ -1,0 +1,138 @@
+/* Styles généraux pour le layout */
+.sidebar-column {
+    /* bg-light est déjà appliqué dans le HTML */
+    /* Optionnel: définir une min-height si nécessaire */
+    /* min-height: 100vh; */
+    border-right: 1px solid #dee2e6; /* Séparateur visuel */
+  }
+  
+  .content-column {
+    background-color: #f8f9fa; /* Fond légèrement différent pour le contenu */
+    min-height: 100vh; /* Assurer que la colonne de contenu prend au moins toute la hauteur */
+    overflow-y: auto; /* Permettre le scroll si le contenu dépasse */
+  }
+  
+  /* --- Styles spécifiques à la Sidebar DANS CE COMPOSANT --- */
+  /* (Adapté de l'exemple précédent, sans position:fixed, width, height) */
+  .sidebar-column .nav-pills .nav-link {
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+  
+  .sidebar-column .nav-pills .nav-link.active,
+  .sidebar-column .nav-pills .show > .nav-link {
+    background-color: #198754;
+    color: white;
+  }
+  .sidebar-column .nav-pills .nav-link.active i {
+    color: white;
+  }
+  
+  .sidebar-column .nav-pills .nav-link:not(.active) {
+    color: #212529;
+  }
+  .sidebar-column .nav-pills .nav-link:not(.active) i {
+     color: #6c757d;
+  }
+  
+  .sidebar-column .nav-pills .nav-link:not(.active):hover {
+    background-color: #e9ecef;
+    color: #000;
+  }
+  .sidebar-column .nav-pills .nav-link:not(.active):hover i {
+     color: #212529;
+  }
+  
+  .sidebar-column .sidebar-footer a {
+    padding: 0.75rem 1rem;
+    display: block;
+    border-radius: 0.375rem;
+  }
+  .sidebar-column .sidebar-footer a:hover {
+    background-color: #e9ecef;
+  }
+  .sidebar-column .sidebar-footer i {
+    color: #6c757d;
+  }
+  .sidebar-column .sidebar-footer a:hover i {
+     color: #212529;
+  }
+  
+  .sidebar-column hr {
+      color: #dee2e6;
+  }
+  
+  
+  /* --- Styles spécifiques au Contenu DANS CE COMPOSANT --- */
+  .content-column .content-nav-pills .nav-link.active,
+  .content-column .content-nav-pills .show > .nav-link {
+    background-color: #e9ecef; /* Gris clair pour la pilule active du contenu */
+    color: #212529;
+  }
+  .content-column .content-nav-pills .nav-link {
+      color: #6c757d;
+      border-radius: 0.375rem;
+  }
+  .content-column .content-nav-pills .nav-link:hover {
+      background-color: #f1f3f5;
+  }
+  
+  .content-column .driver-info-box,
+  .content-column .license-preview-box {
+      background-color: #f8f9fa; /* Peut être ajusté si différent du fond global */
+      border: 1px solid #dee2e6;
+      border-radius: 0.375rem;
+      padding: 1rem;
+  }
+  
+  .content-column .license-preview-box {
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  .content-column .license-preview-box img {
+      max-height: 250px; /* Limiter la hauteur max de l'image */
+      max-width: 100%;
+      object-fit: contain;
+  }
+  
+  .content-column .driver-info-label {
+      color: #6c757d;
+      font-size: 0.875em;
+  }
+  
+  .content-column .badge.status-pending {
+      background-color: #343a40 !important; /* Important pour surcharger BS si nécessaire */
+      color: #fff !important;
+      font-size: 0.75em;
+      padding: 0.4em 0.7em;
+  }
+  /* Les badges bg-success et bg-danger utiliseront les couleurs par défaut de Bootstrap */
+  
+  
+  .content-column .btn-reject {
+     background-color: #f8f9fa;
+     border-color: #dee2e6;
+     color: #212529;
+  }
+  .content-column .btn-reject:hover {
+     background-color: #e9ecef;
+     border-color: #ced4da;
+     color: #000;
+  }
+  
+  /* Styles responsifs optionnels */
+  @media (max-width: 767.98px) { /* md breakpoint */
+    .sidebar-column {
+      border-right: none; /* Pas de bordure quand empilé */
+      border-bottom: 1px solid #dee2e6; /* Ajouter une bordure en bas */
+    }
+    .content-column, .sidebar-column .h-100 {
+       min-height: auto; /* Laisser la hauteur s'ajuster sur mobile */
+       height: auto !important;
+    }
+  }

@@ -1,0 +1,16 @@
+@keyframes leftRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(30px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-left-right {
+    display: inline-block;
+    animation: leftRight 2s ease-in-out infinite;
+  }

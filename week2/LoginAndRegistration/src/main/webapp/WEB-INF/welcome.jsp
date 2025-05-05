@@ -14,9 +14,36 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class="container">
+<div class="container d-flex ">
 	<h1>Welcome  <c:out value="${user.userName}"></c:out> </h1>
 	<a href="/logout" class="btn btn-danger">Logout !!</a>
 </div>
+
+<div class="container">
+<div><p>Course Schedule</p></div>
+<table class="table">
+<thead>
+<th>Class Name</th>
+<th>Weekday</th>
+<th>Price</th>
+</thead>
+<tbody>
+<c:forEach var="c" items="${course}">
+
+<tr>
+<td>${c.name} <a href="/classes/${c.id}/edit">Edit</a></td>
+
+<td>${c.weekday}</td>
+<td>${c.price}</td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
+<div>
+	<a href="/classes/new" class="btn btn-primary">+ New course</a>
+</div>
+</div>
+
+
 </body>
 </html>
